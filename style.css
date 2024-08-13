@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(143, 89, 244, 0.742), rgb(78, 131, 245), rgba(1, 80, 249, 0.982));
+    margin: 0;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.stopwatch {
+    background-color: rgba(255, 255, 255, 0.425);
+    backdrop-filter: blur(90px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+#display {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    padding: 10px 20px;
+    background-color: goldenrod;
+    font-size: 25px;
+    margin: 0 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 80px;
+}
+.lapRecords {
+    width: 100%;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.425);
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+h5 {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+#laps {
+    padding: 5px;
+}
+#laps li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    #display {
+        font-size: 60px;
+    }
+    button {
+        font-size: 18px;
+        max-width: 100px;
+        margin: 5px 0;
+        padding: 10px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .lapRecords {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 601px) {
+    .stopwatch {
+        max-width: 400px;
+    }
+
+    #display {
+        font-size: 80px;
+    }
+
+    button {
+        font-size: 25px;
+    }
+
+    .lapRecords {
+        margin-left: 40px;
+        max-width: 150px;
+    }
+}
