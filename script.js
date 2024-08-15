@@ -1,4 +1,4 @@
-let startTime, totalTime = 0, intervalId;
+let startTime, totalTime = 0, timerUpdate;
 const display = document.getElementById('display');
 const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
@@ -26,7 +26,7 @@ function updateDisplay() {
 
 function start() {
     startTime = Date.now() - totalTime;
-    intervalId = setInterval(() => {
+    timerUpdate = setInterval(() => {
         totalTime = Date.now() - startTime;
         updateDisplay();
     }, 10);
@@ -38,15 +38,15 @@ function start() {
 }
 
 function pause() {
-    clearInterval(intervalId);
+    clearInterval(timerUpdate);
     startBtn.disabled = false;
     pauseBtn.disabled = true;
 }
 
 function resetOrStop() {
-    if (intervalId) {
-        clearInterval(intervalId);
-        intervalId = null;
+    if (timerUpdate) {
+        clearInterval(timerUpdate);
+        timerUpdate = null;
         resetStopBtn.textContent = 'Reset';
     }
     else {
@@ -61,7 +61,7 @@ function resetOrStop() {
 }
 
 function recordLap() {
-    if (intervalId) {
+    if (timerUpdate) {
         const lapTime = document.createElement('li');
         lapTime.textContent = formatTime(totalTime);
         laps.appendChild(lapTime);
