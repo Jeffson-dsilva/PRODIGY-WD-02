@@ -1,12 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 body {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    background: radial-gradient(linear,white, blue, black);
+    height: 100vh; 
+    background-color: #35155D;
     align-items: center;
     font-family: Arial, sans-serif;
 }
@@ -17,17 +13,17 @@ body {
     flex-grow: 1;
 }
 .stopwatch {
-    background-color: black;
+    background-color: #512B81;
     backdrop-filter: blur(90px);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 5px 5px 10px #f9e8c94d;
     text-align: center;
 }
 #display {
     font-size: 80px;
     margin-bottom: 20px;
-    color: aliceblue;
+    color: white;
 }
 .buttons {
     display: flex;
@@ -35,7 +31,7 @@ body {
 }
 button {
     padding: 10px;
-    background-color: greenyellow;
+    background-color: #8CABFF;
     font-size: 20px;
     margin: 0 10px;
     border-radius: 40px;
@@ -47,12 +43,13 @@ button {
     position: -webkit-sticky;
     width: 100%;
     max-width: 200px;
-    background-color: aqua;
+    background-color: #8CABFF;
     border: 2px solid black;
     border-radius: 8px;
     margin-left: 20px;
     max-height: 200px; 
     overflow-y: auto; 
+    margin-left: 50px;
 }
     
 h5 {
